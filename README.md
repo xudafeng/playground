@@ -28,6 +28,7 @@ $ npm i datahub-proxy-middleware --save-dev
 
 ```javascript
 const datahubMiddleware = require('datahub-proxy-middleware');
+
 const datahubConfig = {
   mock: true,
   proxy: {
@@ -37,6 +38,7 @@ const datahubConfig = {
     hostname: 'localhost'
   }
 };
+
 datahubMiddleware(app)(datahubConfig);
 ```
 
