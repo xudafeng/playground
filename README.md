@@ -24,6 +24,24 @@
 $ npm i datahub-proxy-middleware --save-dev
 ```
 
+## Common Usage
+
+```javascript
+const datahubMiddleware = require('datahub-proxy-middleware');
+
+const datahubConfig = {
+  mock: true,
+  proxy: {
+    '^/api': {
+    hub: 'project_name',
+    port: 8080,
+    hostname: 'localhost'
+  }
+};
+
+datahubMiddleware(app)(datahubConfig);
+```
+
 ## License
 
 The MIT License (MIT)
