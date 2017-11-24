@@ -42,6 +42,43 @@ const datahubConfig = {
 datahubMiddleware(app)(datahubConfig);
 ```
 
+## Use with webpack-dev-server
+
+```javascript
+const DataHub = require('macaca-datahub');
+const datahubMiddleware = require('datahub-proxy-middleware');
+
+const datahubConfig = {
+  mock: true,
+  port: 5678,
+  hostname: '127.0.0.1',
+  board: true,
+  store: path.join(__dirname, '..', 'data', 'sample.data'),
+  proxy: {
+    '^/api': {
+      hub: 'sample',
+     },
+  },
+};
+
+const defaultDatahub = new DataHub({
+  port: datahubConfig.port,
+});
+
+// devServer field
+devServer: {
+  before: app => {
+    datahubMiddleware(app)(datahubConfig);
+  },
+  after: () => {
+    defaultDatahub.startServer(datahubConfig).then(() => {
+      console.log('datahub ready');
+    });
+  },
+},
+
+```
+
 ## License
 
 The MIT License (MIT)
