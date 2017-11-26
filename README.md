@@ -50,7 +50,7 @@ const datahubMiddleware = require('datahub-proxy-middleware');
 const datahubConfig = {
   port: 5678,
   hostname: '127.0.0.1',
-  store: path.join(__dirname, '..', 'data', 'sample.data'),
+  store: path.join(__dirname, '..', 'data'),
   proxy: {
     '^/api': {
       hub: 'sample',
