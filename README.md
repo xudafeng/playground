@@ -30,7 +30,6 @@ $ npm i datahub-proxy-middleware --save-dev
 const datahubMiddleware = require('datahub-proxy-middleware');
 
 const datahubConfig = {
-  mock: true,
   proxy: {
     '^/api': {
     hub: 'project_name',
@@ -49,16 +48,15 @@ const DataHub = require('macaca-datahub');
 const datahubMiddleware = require('datahub-proxy-middleware');
 
 const datahubConfig = {
-  mock: true,
   port: 5678,
   hostname: '127.0.0.1',
-  board: true,
   store: path.join(__dirname, '..', 'data', 'sample.data'),
   proxy: {
     '^/api': {
       hub: 'sample',
-     },
+    },
   },
+  showBoard: true,
 };
 
 const defaultDatahub = new DataHub({
