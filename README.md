@@ -77,6 +77,8 @@ devServer: {
 
 ```
 
+showBoard will inject [debugger-board](//github.com/macacajs/debugger-board)
+
 ## License
 
 The MIT License (MIT)

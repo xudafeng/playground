@@ -1,6 +1,6 @@
 {
   "name": "datahub-proxy-middleware",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "datahub proxy middleware",
   "keywords": [
     "datahub",
@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "chalk": "^2.1.0",
+    "debugger-board": "^1.0.0",
     "http-proxy-middleware": "^0.17.4",
     "xlogger": "^1.0.6",
     "xutil": "^1.0.0"
