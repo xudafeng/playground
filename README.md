@@ -44,6 +44,7 @@ datahubMiddleware(app)(datahubConfig);
 ## Use with webpack-dev-server
 
 ```javascript
+const path = require('path');
 const DataHub = require('macaca-datahub');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const datahubMiddleware = require('datahub-proxy-middleware');
