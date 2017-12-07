@@ -46,8 +46,12 @@ datahubMiddleware(app)(datahubConfig);
 [live demo](//github.com/macaca-sample/webpack-datahub-sample)
 
 ```javascript
+const path = require('path');
 const DataHub = require('macaca-datahub');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const datahubMiddleware = require('datahub-proxy-middleware');
+
+// datahub config
 
 const datahubConfig = {
   port: 5678,
@@ -65,6 +69,15 @@ const defaultDatahub = new DataHub({
   port: datahubConfig.port,
 });
 
+// webpack config
+
+// plugins field
+plugins: [
+  new HtmlWebpackPlugin({
+    template: path.join(__dirname, 'index.html')
+  }),
+],
+  
 // devServer field
 devServer: {
   before: app => {
@@ -76,7 +89,6 @@ devServer: {
     });
   },
 },
-
 ```
 
 showBoard will inject [debugger-board](//github.com/macacajs/debugger-board)
