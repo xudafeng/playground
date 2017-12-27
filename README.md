@@ -77,7 +77,7 @@ plugins: [
     template: path.join(__dirname, 'index.html')
   }),
 ],
-  
+
 // devServer field
 devServer: {
   before: app => {

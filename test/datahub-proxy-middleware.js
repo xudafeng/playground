@@ -1,9 +1,10 @@
 'use strict';
 
-var base = require('..');
+const base = require('..');
+const assert = require('assert');
 
-describe('test', function() {
-  it('should be ok', function() {
-    base.should.be.ok();
+describe('test', () => {
+  it('should be ok', () => {
+    assert.ok(base);
   });
 });
