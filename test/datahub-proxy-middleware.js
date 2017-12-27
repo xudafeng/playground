@@ -1,9 +1,11 @@
 'use strict';
 
-var base = require('..');
+const assert = require('assert');
 
-describe('test', function() {
-  it('should be ok', function() {
-    base.should.be.ok();
+const base = require('../lib/datahub-proxy-middleware');
+
+describe('test', () => {
+  it('should be ok', () => {
+    assert.ok(base);
   });
 });
