@@ -1,6 +1,6 @@
 {
   "name": "datahub-proxy-middleware",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "datahub proxy middleware",
   "keywords": [
     "datahub",
