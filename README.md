@@ -52,6 +52,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const datahubMiddleware = require('datahub-proxy-middleware');
 
 // datahub config
+// document: https://github.com/macacajs/macaca-datahub#configuration
 
 const datahubConfig = {
   port: 5678,
