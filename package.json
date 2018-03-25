@@ -21,13 +21,15 @@
     "eslint": "^4.5.0",
     "eslint-plugin-mocha": "^4.11.0",
     "eslint-plugin-react": "^7.5.1",
+    "git-contributor": "^1.0.3",
     "istanbul": "^0.4.5",
     "mocha": "^4.0.1"
   },
   "scripts": {
     "lint": "eslint .",
     "test": "istanbul cover `npm bin`/_mocha",
-    "ci": "npm run lint && npm run test"
+    "ci": "npm run lint && npm run test",
+    "contributor": "git-contributor"
   },
   "license": "MIT"
 }
