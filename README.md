@@ -48,7 +48,6 @@ datahubMiddleware(app)(datahubConfig);
 ```javascript
 const path = require('path');
 const DataHub = require('macaca-datahub');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const datahubMiddleware = require('datahub-proxy-middleware');
 
 // datahub config
@@ -69,15 +68,6 @@ const datahubConfig = {
 const defaultDatahub = new DataHub({
   port: datahubConfig.port,
 });
-
-// webpack config
-
-// plugins field
-plugins: [
-  new HtmlWebpackPlugin({
-    template: path.join(__dirname, 'index.html')
-  }),
-],
 
 // devServer field
 devServer: {
@@ -102,7 +92,7 @@ showBoard will inject [debugger-board](//github.com/macacajs/debugger-board)
 | :---: | :---: |
 
 
-This project follows the git-contributor [spec](https://github.com/xudafeng/git-contributor.git), auto upated at `Sun Mar 25 2018 16:00:50 GMT+0800`.
+This project follows the git-contributor [spec](https://github.com/xudafeng/git-contributor.git), auto upated at `Sun Apr 15 2018 15:28:33 GMT+0800`.
 
 <!-- GITCONTRIBUTOR_END -->
 
