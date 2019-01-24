@@ -1,6 +1,7 @@
 node_modules
 .travis.yml
 coverage/
+.nyc_output
 logs/
 *.sw*
 *.un~
