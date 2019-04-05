@@ -44,10 +44,11 @@ const datahubMiddleware = require('datahub-proxy-middleware');
 const datahubConfig = {
   proxy: {
     '^/api': {
-    hub: 'project_name',
-    port: 8080,
-    hostname: 'localhost'
-  }
+      hub: 'project_name',
+      port: 8080,
+      hostname: 'localhost'
+    },
+  },
 };
 
 datahubMiddleware(app)(datahubConfig);
