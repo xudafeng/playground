@@ -46,7 +46,7 @@ const datahubConfig = {
     '^/api': {
       hub: 'project_name',
       port: 8080,
-      hostname: 'localhost'
+      hostname: 'localhost',
       rewrite: '^/api',
     },
   },
