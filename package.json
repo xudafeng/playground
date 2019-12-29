@@ -1,6 +1,6 @@
 {
   "name": "datahub-proxy-middleware",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "datahub proxy middleware",
   "keywords": [
     "datahub",
@@ -12,7 +12,7 @@
     "url": "git://github.com/macacajs/datahub-proxy-middleware.git"
   },
   "dependencies": {
-    "debugger-board": "2",
+    "debugger-board": "^2.0.0",
     "http-proxy-middleware": "^0.20.0",
     "xlogger": "^1.0.6",
     "xutil": "^1.0.0"
