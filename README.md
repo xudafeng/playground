@@ -47,7 +47,6 @@ const datahubConfig = {
       hub: 'project_name',
       port: 8080,
       hostname: 'localhost',
-      rewrite: '^/api',
     },
   },
 };
@@ -74,7 +73,6 @@ const datahubConfig = {
   proxy: {
     '^/api': {
       hub: 'sample',
-      rewrite: '^/api',
     },
   },
   showBoard: true,
