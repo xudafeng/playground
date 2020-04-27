@@ -14,9 +14,7 @@
   "dependencies": {
     "debugger-board": "^2.0.0",
     "http-proxy-middleware": "^0.20.0",
-    "path-to-regexp": "0.1.7",
-    "xlogger": "^1.0.6",
-    "xutil": "^1.0.0"
+    "path-to-regexp": "0.1.7"
   },
   "devDependencies": {
     "eslint": "^4.5.0",
