@@ -43,10 +43,14 @@ const datahubMiddleware = require('datahub-proxy-middleware');
 
 const datahubConfig = {
   proxy: {
-    '^/api': {
+    '/api': {
       hub: 'project_name',
       port: 8080,
       hostname: 'localhost',
+      // see more details: https://github.com/pillarjs/path-to-regexp
+      pathOptions: {
+        start: true
+      }
     },
   },
 };
@@ -69,9 +73,13 @@ const datahubMiddleware = require('datahub-proxy-middleware');
 const datahubConfig = {
   port: 5678,
   hostname: '127.0.0.1',
+  pathOptions: {
+    start: true,
+    end: false
+  },
   store: path.join(__dirname, '..', 'data'),
   proxy: {
-    '^/api': {
+    '/api': {
       hub: 'sample',
     },
   },
