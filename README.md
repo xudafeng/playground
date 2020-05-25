@@ -47,7 +47,6 @@ const datahubConfig = {
       hub: 'project_name',
       port: 8080,
       hostname: 'localhost',
-      // see more details: https://github.com/pillarjs/path-to-regexp
       pathOptions: {
         start: true
       }
@@ -57,6 +56,8 @@ const datahubConfig = {
 
 datahubMiddleware(app)(datahubConfig);
 ```
+
+*notice* version 6 has a break change that needs special attention, see [more details](https://github.com/pillarjs/path-to-regexp).
 
 ## Use with webpack-dev-server
 
