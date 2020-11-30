@@ -7,6 +7,9 @@
     "middleware"
   ],
   "main": "lib/datahub-proxy-middleware.js",
+  "files": [
+    "lib/**/*.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/macacajs/datahub-proxy-middleware.git"
