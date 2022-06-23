@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <title>websocket sample</title>
+  <style>
+  body {
+    font-family: "Rosario", "Xin Gothic", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  }
+  #page {
+    width: 320px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  h1 {
+    text-align: center;
+  }
+  input, textarea {
+    width: 100%;
+    margin-bottom: 1.5em;
+  }
+  textarea {
+    min-height: 10em;
+  }
+  ul {
+    padding: 0;
+  }
+  li {
+    list-style-type: none;
+    margin-bottom: .5em;
+  }
+  button {
+    font-size: 1.5em;
+  }
+  i {
+    font-style: normal;
+    padding-right: 1em;
+  }
+  #status {
+    font-size: .5em;
+    text-align: left;
+    color: #666;
+    padding-top: 4em;
+  }
+  #history {
+    font-size: .6em;
+    text-align: left;
+    color: #333;
+  }
+  </style>
+</head>
+<body>
+  <div id="page">
+    <h1>Chat Room</h1>
+    <input type="text" id="name" placeholder="name"/>
+    <br/>
+    <textarea id="message" placeholder="message"></textarea>
+    <br/>
+    <button id="send">send</button>
+    <div id="status"></div>
+    <hr/>
+    <ul id="history">
+    </ul>
+  </div>
+  <script src="./client.js"></script>
+</body>
+</html>

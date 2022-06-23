@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  mysql:
+    image: fast-mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    command: mysqld --default-authentication-plugin=mysql_native_password
+
+  redis:
+    image: fast-redis
+    restart: always
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes

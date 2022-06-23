@@ -1,0 +1,15 @@
+{
+  "short_name": "pw sample",
+  "name": "Progressive Web Sample",
+  "icons": [
+    {
+      "src": "./icon.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#ffcc00",
+  "theme_color": "#ffcc00",
+  "display": "fullscreen"
+}

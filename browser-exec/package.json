@@ -1,0 +1,39 @@
+{
+  "name": "browser-exec",
+  "version": "0.1.0",
+  "description": "browser-exec",
+  "keywords": [
+    "browser",
+    "exec"
+  ],
+  "bin": {
+    "browser-exec": "./bin/browser-exec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xudafeng/browser-exec.git"
+  },
+  "dependencies": {
+    "commander": "~2.0.0",
+    "electron": "^9.1.2"
+  },
+  "devDependencies": {
+    "eslint": "*",
+    "eslint-plugin-mocha": "^4.11.0",
+    "git-contributor": "*",
+    "husky": "*",
+    "mocha": "*",
+    "nyc": "*"
+  },
+  "scripts": {
+    "test": "nyc --reporter=lcov --reporter=text mocha",
+    "lint": "eslint . --fix",
+    "contributor": "git-contributor"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "license": "MIT"
+}
