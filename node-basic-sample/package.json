@@ -1,0 +1,31 @@
+{
+  "name": "node-basic-sample",
+  "version": "0.1.0",
+  "description": "node basic sample",
+  "keywords": ["sample"],
+  "bin": {
+    "sample": "./bin/sample"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xudafeng/node-basic-sample.git"
+  },
+  "dependencies": {
+    "koa": "~0.13.0",
+    "koa-qs": "~2.0.0",
+    "koa-static": "~1.4.7",
+    "koa-logger": "~1.2.2",
+    "koa-router": "~3.7.0",
+    "co": "~3.1.0",
+    "co-request": "0.2.1",
+    "co-body": "~1.1.0",
+    "lodash": "~3.5.0",
+    "nunjucks": "1.2.0",
+    "ipv4": "*"
+  },
+  "devDependencies": {
+  },
+  "homepage": "https://github.com/xudafeng/node-basic-sample",
+  "license": "MIT"
+}

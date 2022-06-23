@@ -1,0 +1,11 @@
+{
+  "name": "sample",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "canvas": "~1.1.6",
+    "startserver": "*"
+  },
+  "keywords": []
+}

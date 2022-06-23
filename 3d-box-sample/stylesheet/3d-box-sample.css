@@ -1,0 +1,58 @@
+/* 3d-box-sample demo */
+
+body {
+  background: gray;
+}
+
+#content {
+  text-align: center;
+}
+
+button {
+  font-size: 20px;
+  margin-top: 220px;
+}
+
+.container {
+  position: relative;
+  perspective: 600px;
+  height: 70px;
+}
+
+.container.turn .container-box {
+  transform: rotateX(-90deg);
+}
+
+.container-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform .3s ease-out;
+  transform-origin: 50% 50% -35px;
+}
+
+.front {
+  transform: rotatex(90deg);
+  transform-origin: 50% 50% -35px;
+}
+
+.back {
+  transform: rotatex(0deg);
+  transform-origin: 50% 50% -35px;
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 60px;
+  backface-visibility: hidden;
+}

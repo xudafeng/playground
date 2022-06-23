@@ -1,0 +1,17 @@
+{
+  "name": "websocket-sample",
+  "version": "1.0.0",
+  "description": "websocket sample",
+  "keywords": [
+    "socket"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xudafeng/websocket-sample.git"
+  },
+  "dependencies": {
+    "ipv4": "0.0.4",
+    "websocket.io": "^0.2.1"
+  },
+  "license": "MIT"
+}
