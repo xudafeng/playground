@@ -1,0 +1,11 @@
+{
+  "name": "jieba-demo",
+  "private": true,
+  "version": "0.1.0",
+  "devDependencies": {
+    "@node-rs/jieba": "^1.6.1"
+  },
+  "scripts": {
+    "test": "node ./test.js"
+  }
+}
