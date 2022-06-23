@@ -1,0 +1,35 @@
+{
+  "name": "sqlcipher-test",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xudafeng/sqlcipher-test.git"
+  },
+  "dependencies": {
+    "leoric": "*",
+    "sqlite3": "4.1.1"
+  },
+  "devDependencies": {
+    "electron": "17",
+    "electron-builder": "22.3.2",
+    "electron-rebuild": "^1.8.8",
+    "eslint": "*",
+    "eslint-plugin-mocha": "^4.11.0",
+    "git-contributor": "*",
+    "husky": "*",
+    "mocha": "*",
+    "nyc": "*"
+  },
+  "scripts": {
+    "test": "nyc --reporter=lcov --reporter=text mocha",
+    "lint": "eslint . --fix",
+    "contributor": "git-contributor"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "license": "MIT"
+}

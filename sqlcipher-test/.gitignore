@@ -1,0 +1,12 @@
+.DS_Store
+node_modules
+npm-debug.log
+.idea/*
+Thumbs.db
+.nyc_output
+build/
+dist/
+*.gz
+*.sw*
+*.un~
+*.sqlite
