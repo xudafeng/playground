@@ -1,0 +1,22 @@
+table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+  display: block;
+  overflow-x: auto;
+  text-align: left;
+  font-family: sans-serif;
+}
+
+tr {
+  border-top: 1px solid #dfe2e5;
+}
+
+tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+td,
+th {
+  border: 1px solid #dfe2e5;
+  padding: 0.6em 1em;
+}

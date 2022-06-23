@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="datavis demo">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <title>g2</title>
+  <link rel="stylesheet" href="../stylesheet/base.css"/>
+  <link rel="stylesheet" href="../stylesheet/datavis.css"/>
+  <script src="//unpkg.com/jquery@3.1.1/dist/jquery.js"></script>
+  <script src="//npmcdn.com/g2@2.2.2/index.js"></script>
+  <base target="_blank">
+    <style type="text/css">
+      .ac-tooltip{
+        position:absolute;
+        visibility:hidden;
+        border : 1px solid #999;
+        border-radius: 5px;
+        background-color: white;
+        opacity: .8;
+        padding: 20px;
+        transition: top 200ms,left 200ms;
+        -moz-transition:  top 200ms,left 200ms;  /* Firefox 4 */
+        -webkit-transition:  top 200ms,left 200ms; /* Safari 和 Chrome */
+        -o-transition:  top 200ms,left 200ms;
+      }
+      .ac-tooltip .ac-title{
+        margin: 0;
+        padding: 5px 0;
+      }
+      .ac-tooltip .ac-list{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .ac-tooltip li{
+        line-height:  22px;
+      }
+    </style>
+</head>
+<body>
+  <div id="content">
+    <a href="//antv.alipay.com/g2/doc/index.html">
+      <h1>g2</h1>
+    </a>
+    <hr/>
+    <h2>pie</h2>
+    <div class="item" id="pie-0">
+    </div>
+    <hr/>
+    <h2>doughnut</h2>
+    <div class="item" id="pie-1">
+    </div>
+    <hr/>
+    <h2>line</h2>
+    <div class="item" id="line-0">
+    </div>
+    <hr/>
+    <h2>bar</h2>
+    <div class="item" id="bar-0">
+    </div>
+    <div class="item" id="bar-1">
+    </div>
+  </div>
+</body>
+<script src="./index.js"></script>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "charset-compress",
+  "version": "1.0.0",
+  "description": "charset compress",
+  "keywords": [
+    "compress"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xudafeng/charset-compress.git"
+  },
+  "dependencies": {},
+  "license": "MIT",
+  "devDependencies": {
+    "startserver": "^1.2.3"
+  }
+}

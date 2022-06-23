@@ -1,0 +1,34 @@
+{
+  "name": "test",
+  "version": "0.1.0",
+  "description": "test",
+  "keywords": [
+    "test"
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xudafeng/test.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "*",
+    "eslint-plugin-mocha": "^4.11.0",
+    "git-contributor": "*",
+    "husky": "*",
+    "mocha": "*",
+    "nyc": "*",
+    "urllib": "^2.34.2"
+  },
+  "scripts": {
+    "test": "nyc --reporter=lcov --reporter=text mocha",
+    "lint": "eslint . --fix",
+    "contributor": "git-contributor"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "license": "MIT"
+}

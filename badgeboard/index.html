@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <title>badgeboard</title>
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <base target="_blank" />
+</head>
+
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Repo</th>
+        <th>Npm Version</th>
+        <th>Build Status</th>
+        <th>Code Coverage (codecov)</th>
+        <th>Code Coverage (coveralls)</th>
+      </tr>
+    </thead>
+    <tbody id="table"></tbody>
+  </table>
+  <script>
+  const ajax = function(url, successCallback) {
+    let request = new XMLHttpRequest();
+    request.open('GET', url, true);
+
+    request.onreadystatechange = function() {
+      if (this.readyState === 4) {
+        if (this.status >= 200 && this.status < 400) {
+          successCallback(this.responseText);
+        }
+      }
+    };
+
+    request.send();
+    request = null;
+  };
+  const table = document.querySelector('#table');
+  // const group = 'macacajs';
+  const group = location.host.split('.')[0];
+  document.title = 'badgeboard for ' + group;
+  let pages = 3;
+  let data = [];
+  for (var i = 1; i <= pages; i++) {
+    ajax(`//api.github.com/users/${group}/repos?page=${i}`, function(res) {
+      data = [...data, ...JSON.parse(res)];
+      pages--;
+      if (pages === 0) {
+        display(data);
+      }
+    });
+  }
+
+  const display = (data) => {
+    data.sort((a, b) => {
+      return a.name > b.name ? 1 : -1;
+    });
+    data.forEach(function(item) {
+      if (!!~location.pathname.indexOf(item.name)) {
+        return;
+      }
+      const row = document.createElement('tr');
+      const line1 = document.createElement('td');
+      const name = document.createElement('a');
+      name.href = item.html_url;
+      name.innerText = item.name;
+      line1.appendChild(name);
+      row.appendChild(line1);
+
+      const line2 = document.createElement('td');
+      const badge = document.createElement('a');
+      badge.href = 'https://npmjs.org/package/' + item.name;
+      badge.innerHTML = '<img src="https://img.shields.io/npm/v/' + item.name + '.svg?style=flat-square" alt="NPM version"/>';
+      line2.appendChild(badge);
+      row.appendChild(line2);
+
+      const line3 = document.createElement('td');
+      const badge2 = document.createElement('a');
+      badge2.href = 'https://travis-ci.org/' + item.full_name;
+      badge2.innerHTML = '<img src="https://img.shields.io/travis/' + item.full_name + '.svg?style=flat-square" alt="build status"/>';
+      line3.appendChild(badge2);
+      row.appendChild(line3);
+
+      const line4 = document.createElement('td');
+      const badge3 = document.createElement('a');
+      badge3.href = 'https://codecov.io/gh/' + item.full_name;
+      badge3.innerHTML = '<img src="https://img.shields.io/codecov/c/github/' + item.full_name + '.svg?style=flat-square" alt="Codecov code coverage"/>';
+      line4.appendChild(badge3);
+      row.appendChild(line4);
+
+      const line5 = document.createElement('td');
+      const badge4 = document.createElement('a');
+      badge4.href = 'https://coveralls.io/r/' + item.full_name;
+      badge4.innerHTML = '<img src="https://img.shields.io/coveralls/' + item.full_name + '.svg?style=flat-square" alt="Coveralls code coverage"/>';
+      line5.appendChild(badge4);
+      row.appendChild(line5);
+
+      table.appendChild(row);
+    });
+  }
+  </script>
+</body>
+
+</html>

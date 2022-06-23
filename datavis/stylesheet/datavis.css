@@ -1,0 +1,16 @@
+/* datavis demo */
+
+#content h1,
+#content h2 {
+  text-align: center;
+}
+
+#content .item {
+  width: 40%;
+  margin: 5% auto;
+  border: 3px solid grey;
+}
+
+body {
+  padding: 5% 0;
+}
