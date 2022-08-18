@@ -2,14 +2,11 @@
   "name": "pwa-sample",
   "version": "0.1.0",
   "description": "pwa",
+  "private": true,
   "keywords": [
     "pwa"
   ],
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/xudafeng/pwa-sample.git"
-  },
   "dependencies": {},
   "devDependencies": {
     "co-mocha": "*",
@@ -27,6 +24,5 @@
   "pre-commit": [
     "jshint"
   ],
-  "homepage": "https://github.com/xudafeng/pwa-sample",
   "license": "MIT"
 }
