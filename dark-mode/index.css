@@ -1,0 +1,27 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+#content {
+  padding: 20px;
+}
+
+/** theme styles */
+
+:root {
+  --background-color: #fff;
+  --text-color: #333;
+  --link-color: #b52;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+[prefers-color-scheme="dark"] {
+  --background-color: #111416;
+  --text-color: #ccc;
+  --link-color: #f96;
+}
