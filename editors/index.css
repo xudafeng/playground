@@ -12,21 +12,50 @@ body {
 
 #title {
   text-align: center;
+  text-decoration: none;
+  color: #000;
+}
+
+#title:hover {
+  text-decoration: underline;
 }
 
 #toolbar {
   display: flex;
-  border: 1px solid #ddd;
 }
 
 #toolbar .btn {
-  padding: 12px;
-  background-color: #ebebeb;
-  margin-right: 12px;
-  min-width: 64px;
+  padding: 8px;
+  margin-right: 8px;
+  min-width: 48px;
   text-align: center;
   cursor: pointer;
   border: none;
+}
+
+.btn.btn-group-1 {
+  color: #fff;
+  background-color: rgb(232, 50, 60);
+}
+
+.btn.btn-group-2 {
+  color: #fff;
+  background-color: rgb(250, 84, 28);
+}
+
+.btn.btn-group-3 {
+  color: #fff;
+  background-color: rgb(47, 84, 235);
+}
+
+.btn.btn-group-4 {
+  color: #fff;
+  background-color: rgb(114, 46, 209);
+}
+
+.btn.btn-group-5 {
+  color: #fff;
+  background-color: rgb(235, 47, 150);
 }
 
 #editor {

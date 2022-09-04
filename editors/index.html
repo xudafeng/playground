@@ -6,14 +6,35 @@
 </head>
 <body>
   <div id="content">
-    <h1 id="title">Editor</h1>
+    <a target="_blank" id="title" href="https://xudafeng.github.io/playground/editors/">
+      <h1>Editor</h1>
+    </a>
     <div id="toolbar">
-      <button class="btn" data-action="redo">REDO</button>
-      <button class="btn" data-action="undo">UNDO</button>
-      <button class="btn" data-action="bold">B</button>
-      <button class="btn" data-action="italic">I</button>
-      <button class="btn" data-action="strikeThrough">S</button>
-      <button class="btn" data-action="underline">U</button>
+      <button class="btn btn-group-1" data-action="redo">REDO</button>
+      <button class="btn btn-group-1" data-action="undo">UNDO</button>
+      <select class="btn btn-group-2" id="fontSize">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+      </select>
+      <button class="btn btn-group-2" data-action="foreColor">A</button>
+      <button class="btn btn-group-2" data-action="bold">B</button>
+      <button class="btn btn-group-2" data-action="italic">I</button>
+      <button class="btn btn-group-2" data-action="strikeThrough">S</button>
+      <button class="btn btn-group-2" data-action="underline">U</button>
+      <button class="btn btn-group-3" data-action="subscript">Sub</button>
+      <button class="btn btn-group-3" data-action="superscript">Sup</button>
+      <button class="btn btn-group-4" data-action="insertHorizontalRule">HR</button>
+      <button class="btn btn-group-5" data-action="justifyLeft">left</button>
+      <button class="btn btn-group-5" data-action="justifyRight">right</button>
+      <button class="btn btn-group-5" data-action="justifyCenter">center</button>
+      <button class="btn btn-group-5" data-action="justifyFull">full</button>
+      <button class="btn btn-group-6" data-action="insertOrderedList">O</button>
+      <button class="btn btn-group-6" data-action="insertUnorderedList">L</button>
     </div>
     <div id="editor" contenteditable="true"></div>
     <textarea disabled id="output"></textarea>

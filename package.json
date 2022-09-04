@@ -1,0 +1,18 @@
+{
+  "name": "playground",
+  "private": true,
+  "devDependencies": {
+    "globby": "4",
+    "lodash": "4",
+    "startserver": "1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xudafeng/playground",
+    "page": "https://xudafeng.github.io/playground"
+  },
+  "scripts": {
+    "build": "node ./scripts/build.js",
+    "dev": "startserver -m"
+  }
+}
