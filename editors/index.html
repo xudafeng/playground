@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>Editor</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+  <div id="content">
+    <h1 id="title">Editor</h1>
+    <div id="toolbar">
+      <button class="btn" data-action="redo">REDO</button>
+      <button class="btn" data-action="undo">UNDO</button>
+      <button class="btn" data-action="bold">B</button>
+      <button class="btn" data-action="italic">I</button>
+      <button class="btn" data-action="strikeThrough">S</button>
+      <button class="btn" data-action="underline">U</button>
+    </div>
+    <div id="editor" contenteditable="true"></div>
+    <textarea disabled id="output"></textarea>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>

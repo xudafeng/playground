@@ -1,0 +1,44 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#content {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+
+#title {
+  text-align: center;
+}
+
+#toolbar {
+  display: flex;
+  border: 1px solid #ddd;
+}
+
+#toolbar .btn {
+  padding: 12px;
+  background-color: #ebebeb;
+  margin-right: 12px;
+  min-width: 64px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+
+#editor {
+  border: 1px solid #ddd;
+  padding: 8px;
+  margin-top: 12px;
+  padding-bottom: 48px;
+}
+
+#output {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 8px;
+  margin-top: 12px;
+}
