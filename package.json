@@ -4,6 +4,7 @@
   "devDependencies": {
     "globby": "4",
     "lodash": "4",
+    "moment": "2",
     "startserver": "1"
   },
   "repository": {

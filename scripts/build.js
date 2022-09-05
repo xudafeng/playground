@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const _ = require('lodash');
+const moment = require('moment');
 const { sync: globby } = require('globby');
 
 const pkg = require('../package');
@@ -20,6 +21,9 @@ function getContent() {
     res.push(`## ${key}`);
     res.push(groupData[key].map(item => `- ${baseURL}/${item}`).join('\n'));
   });
+
+  res.push(`<!-- Updated at ${moment().format('YYYY-MM-DD HH:mm')} -->`);
+
   return {
     startToken,
     endToken,
