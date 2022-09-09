@@ -13,6 +13,8 @@
 - https://xudafeng.github.io/playground/charset-compress/index.html
 ## code128
 - https://xudafeng.github.io/playground/code128/index.html
+## css-houdini
+- https://xudafeng.github.io/playground/css-houdini/index.html
 ## dark-mode
 - https://xudafeng.github.io/playground/dark-mode/index.html
 ## datavis
@@ -43,5 +45,5 @@
 ## websocket-sample
 - https://xudafeng.github.io/playground/websocket-sample/app.html
 - https://xudafeng.github.io/playground/websocket-sample/index.html
-<!-- Updated at 2022-09-05 15:30 -->
+<!-- Updated at 2022-09-09 13:36 -->
 <!-- GITCONTRIBUTOR_END -->

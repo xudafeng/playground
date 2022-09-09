@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>CSS Houdini</title>
+  <meta charset='utf-8' />
+  <style>
+  .button {
+    color: #fff;
+    font-size: 24em;
+    --stop-color: blue;
+    background: linear-gradient(var(--stop-color), black);
+    transition: --stop-color 1s;
+  }
+
+  .button:hover {
+    --stop-color: green;
+  }
+  </style>
+</head>
+<body>
+  <button class='button'>CSS</button>
+  <script>
+    CSS.registerProperty({
+      name: '--stop-color',
+      syntax: '<color>',
+      inherits: false,
+      initialValue: 'rgba(0, 0, 0, 0)'
+    });
+  </script>
+</body>
+</html>
