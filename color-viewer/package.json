@@ -1,0 +1,55 @@
+{
+  "name": "color-viewer",
+  "version": "1.0.4",
+  "description": "color viewer",
+  "keywords": [
+    "color"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xudafeng/color-viewer.git"
+  },
+  "files": [
+    "dist/**/*.js"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^7.1.0",
+    "babel-plugin-istanbul": "^4.1.5",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-stage-2": "^6.22.0",
+    "cross-env": "^5.1.3",
+    "eslint": "^4.12.1",
+    "eslint-plugin-mocha": "^4.11.0",
+    "git-contributor": "1",
+    "macaca-cli": "^2.0.12",
+    "macaca-coverage": "^1.0.0",
+    "macaca-electron": "11",
+    "macaca-reporter": "^1.0.36",
+    "macaca-wd": "^1.0.18",
+    "monitor.js": "^1.0.10",
+    "pre-commit": "*",
+    "stats.js": "^0.17.0",
+    "three": "^0.89.0",
+    "three-orbit-controls": "^82.1.0",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "dev:test": "cross-env NODE_ENV=test webpack-dev-server",
+    "lint": "eslint --fix .",
+    "serve": "npm run dev:test &",
+    "test": "macaca run -d ./test",
+    "prepublish": "npm run build",
+    "contributor": "git-contributor",
+    "build": "cross-env NODE_ENV=production webpack -p",
+    "ci": "npm run lint && npm run serve && npm run test"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "license": "MIT"
+}

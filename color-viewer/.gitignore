@@ -1,0 +1,8 @@
+node_modules
+coverage/
+screenshots/
+reports/
+dist/
+*.gz
+*.sw*
+*.un~

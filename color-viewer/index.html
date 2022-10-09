@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="pwa demo">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>color viewer</title>
+    <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: "Rosario", "Xin Gothic", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    }
+    #container {
+      cursor: pointer;
+    }
+    #panel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+    }
+    #panel .content {
+      display: inline-block;
+      padding: 0.1rem 3rem;
+      border-bottom-left-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+      transition: box-shadow 1s ease;
+      box-shadow: 0 3px 3px rgba(125, 125, 125, 0.4);
+    }
+
+    #panel .content:hover {
+      box-shadow: 0 3px 3px rgba(125, 125, 125, 0);
+    }
+
+    #panel .text {
+      font-size: 3rem;
+      margin: 0;
+      padding: 2px;
+      transition: color 2s ease;
+    }
+
+    #panel .indent {
+      display: inline-block;
+      position: relative;
+      vertical-align: top;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    #panel .left-indent {
+      left: .34rem;
+    }
+
+    #panel .right-indent {
+      right: .34rem;
+    }
+    @media only screen and (max-width: 500px) {
+      .ribbon {
+        display: none;
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <div class="ribbon" style="position:fixed;right:0;top:0;width:150px;height:150px;overflow:hidden;z-index:9999999;">
+      <a target="_blank" style="display:inline-block;width:200px;overflow:hidden;padding:6px 0;text-align:center;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg);-transform:rotate(45deg);text-decoration:none;color:#fff;position:inherit;top:45px;right:-40px;border-width:1px 0;border-style:dotted;border-color:rgba(255, 255, 255, 0.7);font:700 13px &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;box-shadow:0 2px 3px 0 rgba(0, 0, 0, 0.5);background-color:#a00;" href="//github.com/xudafeng/color-viewer">
+        Fork me on Github
+      </a>
+    </div>
+    <div id="container"></div>
+    <div id="panel">
+      <div class="left-indent indent"></div>
+      <div class="content">
+        <input type="color" id="color_input" />
+        <pre class="text"></pre>
+      </div>
+      <div class="right-indent indent"></div>
+    <div>
+    <script>
+      var isOnline = location.protocol === 'https:';
+      var head = document.getElementsByTagName('body').item(0);
+      var script = document.createElement('script');
+      script.src = (isOnline ? '//unpkg.com/color-viewer@latest' : '.') + '/dist/index.js';
+      script.type = 'text/javascript';
+      script.defer = true;
+      head.appendChild(script);
+    </script>
+  </body>
+</html>
