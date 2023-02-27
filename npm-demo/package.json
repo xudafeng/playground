@@ -1,0 +1,13 @@
+{
+  "name": "npm-demo",
+  "scripts": {
+    "test": "node ./test.js"
+  },
+  "resolutions": {
+    "ipv4": "./packages/pkg1"
+  },
+  "devDependencies": {
+    "ipv4": "^1.0.4",
+    "startserver": "^1.3.4"
+  }
+}
